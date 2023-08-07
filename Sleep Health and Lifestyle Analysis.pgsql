@@ -1,5 +1,4 @@
 --Identify any columns or fields that contain Null or missing values, which could indicate incomplete or erroneous data.
-
 select * from Sleep
 where Person_ID is NULL
 or Gender is NULL
@@ -16,7 +15,6 @@ or Daily_Steps is NULL
 or Sleep_Disorder is NULL;
 
 --What is the overall distribution of gender and the average age of the individuals in the dataset?
-
 select Gender, count(*) as total_number, round(avg(Age),2) as avg_age
 from Sleep
 GROUP by Gender;
