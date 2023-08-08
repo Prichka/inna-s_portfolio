@@ -11,3 +11,7 @@ Sleep Health and Lifestyle Analysis
 **Skills:** data cleaning, data analysis, DQL (Data Query Language), Windows Functions, Aggregate Functions.    
 **Tools:** PgAdmin, Visual Studio Code.    
 **Results:** I explored various aspects of the dataset, including demographics, sleep patterns, physical activity levels, and health metrics, such as stress levels. By utilizing window functions, I gained valuable insights into individual and group-level trends, enabling us to identify top performers, distribution patterns, and key characteristics among individuals and different occupations.
+
+Tableau Vizzes
+---
+Please visit [My Tableau Public account](https://public.tableau.com/app/profile/inna3001) 
