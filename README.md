@@ -3,6 +3,15 @@
 ---
 This repository is a portfolio of data analyst projects I've completed for self learning and a way to track my progress in Data Analytics topics.
 
+Olympic Games Analysis
+---
+**Code:** [Olympic Games Analysis](https://github.com/Prichka/inna-s_portfolio/blob/main/Olympic%20Games%20Analysis.pgsql)    
+**Database Source:** [Kaggle](https://www.kaggle.com/datasets/manishkumar7432698/olympics-1896-2022?resource=download)    
+**Description:** The Athletes table compiles information about athletes who have participated in Olympic Games. This table includes data on all athletes who participated in the Olympics, not just medalists, making it a comprehensive source for athlete-related information in the context of Olympic Games analysis. The Medals table provides a comprehensive record of medals awarded during various Olympic Games.  The table specifically focuses on medalists and their associated attributes.    
+**Skills:** Data cleaning, Data analysis, Joins, CTE's, DML (Data Manipulation Language), DQL (Data Query Language), DDL (Data Definition Language), Windows Functions, Aggregate Functions.    
+**Tools:** PgAdmin, Visual Studio Code.    
+**Results:** In my analysis of Olympic Games data, comprising both medal and athlete information, I uncovered significant insights. I identified top-performing countries through total medal counts and explored medal distribution across disciplines. Leveraging window functions, I identified countries with remarkable consecutive medal streaks. Demographic analysis revealed the diversity of Olympic participants, while statistical measures offered a comprehensive view of athlete attributes. Finally, I explored correlations between athlete characteristics and medal counts, shedding light on potential factors influencing Olympic success.
+
 Sleep Health and Lifestyle Analysis
 ---
 **Code:** [Sleep Health and Lifestyle Analysis](https://github.com/Prichka/inna-s_portfolio/blob/main/Sleep%20Health%20and%20Lifestyle%20Analysis.pgsql)    
