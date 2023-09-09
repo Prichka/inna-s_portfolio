@@ -139,38 +139,16 @@ where Age > 0
 and Weight > 0
 and Height > 0;
 
--- Calculate correlation coefficient between age and the number of medals won
-select corr(Age, medals_count) as age_medals_correlation
+-- Calculate correlation coefficient between age/weight/height and the number of medals won
+select corr(Age, medals_count) as age_medals_correlation     --replace with weight/height
 from (
-    select athletes.Age, count(*) as medals_count
+    select athletes.Age, count(*) as medals_count            --replace with weight/height 
     from athletes
     left join medals 
     on athletes.Name = medals.athlete_full_name
     where medals.medal_type is not null
-    group by athletes.Age) as subquery
-where Age is not null;
-
--- Calculate correlation coefficient between weight and the number of medals won
-select corr(Weight, medals_count) as weight_medals_correlation
-from (
-    select athletes.Weight, count(*) as medals_count
-    from athletes
-    left join medals 
-    on athletes.Name = medals.athlete_full_name
-    where medals.medal_type is not null
-    group by athletes.Weight) as subquery
-where Weight is not null;
-
--- Calculate correlation coefficient between height and the number of medals won
-select corr(Height, medals_count) as height_medals_correlation
-from (
-    select athletes.Height, count(*) as medals_count
-    from athletes
-    left join medals 
-    on athletes.Name = medals.athlete_full_name
-    where medals.medal_type is not null
-    group by athletes.Height) as subquery
-where Height is not null;
+    group by athletes.Age) as subquery			     --replace with weight/height
+where Age is not null;					     --replace with weight/height
 
 --What is the age distribution of medal-winning athletes?
 select discipline_title, min(Age) as min_age, max(Age) as max_age, round(avg(Age),0) as avg_age
