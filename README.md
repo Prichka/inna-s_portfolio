@@ -3,6 +3,15 @@
 ---
 This repository is a portfolio of data analyst projects I've completed for self learning and a way to track my progress in Data Analytics topics.
 
+Analysis of Marketing campaigns of a Portuguese banking institution
+---
+**Code:** [Marketing Campaign]((https://github.com/Prichka/inna-s_portfolio/blob/main/Marketing%20Campaign)    
+**Database Source:** [Kaggle](https://www.kaggle.com/datasets/rajkumarpandey02/bank-marketing-dataset/)    
+**Description:** The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls.   
+**Skills:** Data analysis, CTE's, DML (Data Manipulation Language), DQL (Data Query Language), DDL (Data Definition Language), Windows Functions, Aggregate Functions.    
+**Tools:** PgAdmin, Visual Studio Code.    
+**Results:** The analysis of the "Bank" dataset offers valuable insights into the characteristics and outcomes of a direct marketing campaign conducted by a Portuguese banking institution. Key findings include a diverse customer age range with an average of 40 years, prevalent job roles in administration, blue-collar, and technician positions, and a noteworthy distribution of loan portfolios among clients. The analysis of contact frequency across months and days of the week provides a basis for optimizing future campaign scheduling. Additionally, success percentages related to communication modes and marital statuses shed light on factors influencing subscription outcomes. Overall, this comprehensive analysis equips the banking institution with actionable insights to enhance targeting strategies, improve campaign efficiency, and refine communication approaches for future marketing endeavors.
+
 Olympic Games Analysis
 ---
 **Code:** [Olympic Games Analysis](https://github.com/Prichka/inna-s_portfolio/blob/main/Olympic%20Games%20Analysis.pgsql)    
