@@ -1,13 +1,11 @@
 The follwing query returns a comprehensive list of columns and their associated metadata for the "Bank" table. 
 It's useful for understanding the structure and characteristics of the table, including data types and constraints on each column.
 
-````sql
 select 
     column_name, 
     data_type
 from information_schema.columns
 where table_name='Bank'
-````
 
 age: Age of the client.
 job: Type of job the client holds.
@@ -26,13 +24,14 @@ n_contacts: Number of contacts before this campaign.
 poutcome: Outcome of the previous marketing campaign.
 term_deposit_subscribe: Indicates if the client subscribed to a term deposit.
 
-Let's begin with an analysis of the customer age:
+**Let's begin with an analysis of the customer age:**
+```
 select 
     min(age) as min, 
     round(avg(age),1) as avg,
     max(age) as max, count(*) as number_of_clients
 from "Bank";
-
+```
 The results provide key statistical measures for customer age in the "Bank" dataset. 
 The youngest customer is 17 years old, the maximum age of the customer is 98, and the average age is 40.
 In addition, we learned that 41188 people participated in the marketing campaign.
