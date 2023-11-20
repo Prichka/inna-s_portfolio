@@ -3,7 +3,7 @@
 ---
 This repository is a portfolio of data analyst projects I've completed for self learning and a way to track my progress in Data Analytics topics.
 
-Analysis of Marketing campaigns of a Portuguese banking institution
+Analysis of Marketing Campaigns
 ---
 **Code:** [Marketing Campaign]((https://github.com/Prichka/inna-s_portfolio/blob/main/Marketing%20Campaign)    
 **Database Source:** [Kaggle](https://www.kaggle.com/datasets/rajkumarpandey02/bank-marketing-dataset/)    
