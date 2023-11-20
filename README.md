@@ -5,7 +5,7 @@ This repository is a portfolio of data analyst projects I've completed for self 
 
 Analysis of Marketing Campaigns
 ---
-**Code:** [Marketing Campaign]((https://github.com/Prichka/inna-s_portfolio/blob/main/Marketing%20Campaign)    
+**Code:** [Marketing Campaign](https://github.com/Prichka/inna-s_portfolio/blob/main/Marketing%20Campaign)    
 **Database Source:** [Kaggle](https://www.kaggle.com/datasets/rajkumarpandey02/bank-marketing-dataset/)    
 **Description:** The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls.   
 **Skills:** Data analysis, CTE's, DML (Data Manipulation Language), DQL (Data Query Language), DDL (Data Definition Language), Windows Functions, Aggregate Functions.    
