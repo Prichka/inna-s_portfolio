@@ -1,11 +1,13 @@
 The follwing query returns a comprehensive list of columns and their associated metadata for the "Bank" table. 
 It's useful for understanding the structure and characteristics of the table, including data types and constraints on each column.
 
+````sql
 select 
     column_name, 
     data_type
 from information_schema.columns
 where table_name='Bank'
+````
 
 age: Age of the client.
 job: Type of job the client holds.
@@ -168,6 +170,18 @@ Despite successful calls, only 18.23% of clients agreed to make a deposit on Fri
 while on Thursdays 22.52% wanted to open a new deposit.
 
 
+Subscription Rate Variation Among Marital Statuses:
+select 
+    marital,
+    round(sum(case when term_deposit_subscribe='yes' then 1 else 0 end)::decimal/count(*)*100) as success_percentage
+from "Bank"
+group by marital
+order by success_percentage desc;
+
+Understanding the subscription rate variation among marital statuses helps in tailoring marketing strategies for different demographic groups.
+However, there was no significant difference between clients with different marital statuses.
+
+
 Average Duration Time and Success Percentage by Communication Mode:
 select 
     contact,
@@ -182,7 +196,7 @@ Understanding the average duration time per contact helps assess the level of en
 The average duration time for cellular communication is slightly higher (264 seconds) than that for telephone communication (249 seconds).
 
 
-9. Number of contacts performed during this campaign.
+Campaign Analysis - Number of calls:
 select 
     campaign,
     count(*) as number_of_clients,
@@ -191,7 +205,11 @@ from "Bank"
 group by campaign
 order by campaign desc;
 
-10. Can you identify the top 10 clients with the longest duration of the last contact? Success?
+I were surprised to find that some clients were contacted more than 40 times for this marketing campaign.
+An absolute record is 56 calls to one client! Perhaps we should analyze why there were so many repeat calls and how effectively this time was used.
+
+
+Top 10 Clients with Longest Duration of Last Contact and Success:
 select
     age,
     education,
@@ -204,7 +222,12 @@ from "Bank"
 order by duration desc
 limit 10;
 
-11. What is the distribution of days since the client was last contacted?
+Identifying clients with long contact durations can offer insights into potential high-engagement interactions.
+Out of the 10 longest conversations, only 3 clients agreed to a deposit.
+Therefore, a long conversation with a client cannot always lead to a successfully completed transaction.
+
+
+Distribution of Days Since Last Contact:
 select
     days_from_last_contact,
     count(*) AS frequency,
@@ -213,11 +236,15 @@ from "Bank"
 group by days_from_last_contact
 order by days_from_last_contact;
 
+Examining the distribution of days since the last contact helps in assessing the recency of client engagements.
+96.32% of clients participated in a marketing campaign for the first time.
 
-How does the subscription rate vary among different marital statuses?
-select 
-    marital,
-    round(sum(case when term_deposit_subscribe='yes' then 1 else 0 end)::decimal/count(*)*100) as success_percentage
-from "Bank"
-group by marital
-order by success_percentage desc;
+
+Conclusion: 
+The analysis of the "Bank" dataset offers valuable insights into the characteristics and outcomes of a direct marketing campaign 
+conducted by a Portuguese banking institution. Key findings include a diverse customer age range with an average of 40 years, 
+prevalent job roles in administration, blue-collar, and technician positions, and a noteworthy distribution of loan portfolios among clients. 
+The analysis of contact frequency across months and days of the week provides a basis for optimizing future campaign scheduling. 
+Additionally, success percentages related to communication modes and marital statuses shed light on factors influencing subscription outcomes. 
+Overall, this comprehensive analysis equips the banking institution with actionable insights to enhance targeting strategies, improve campaign efficiency, 
+and refine communication approaches for future marketing endeavors.
